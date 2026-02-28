@@ -28,7 +28,7 @@ export async function appendExamResult(row) {
 
         console.log("✅ Ghi Google Sheet thành công");
     } catch (err) {
-        console.error("❌ GHI SHEET LỖI:", err.response?.data || err.message);
+        console.error("❌ GHI SHEET LỖI:", err.message);
         throw err;
     }
 }

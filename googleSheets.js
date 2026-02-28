@@ -18,7 +18,7 @@ export async function appendExamResult(row) {
     try {
         await sheets.spreadsheets.values.append({
             spreadsheetId: SPREADSHEET_ID,
-            range: ${SHEET_NAME}!A:Z, // ✅ FIXED
+            range: ${SHEET_NAME}!A:Z,
             valueInputOption: "RAW",
             insertDataOption: "INSERT_ROWS",
             requestBody: {

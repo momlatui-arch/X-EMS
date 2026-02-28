@@ -18,8 +18,8 @@ export async function appendExamResult(row) {
     try {
         await sheets.spreadsheets.values.append({
             spreadsheetId: SPREADSHEET_ID,
-            range: `${SHEET_NAME}!A:Z`,   // ✅ RANGE CHUẨN
-            valueInputOption: "RAW",     // ✅ OPTION CHUẨN
+            range: ${SHEET_NAME}!A:Z, // ✅ FIXED
+            valueInputOption: "RAW",
             insertDataOption: "INSERT_ROWS",
             requestBody: {
                 values: [row]
@@ -28,7 +28,7 @@ export async function appendExamResult(row) {
 
         console.log("✅ Ghi Google Sheet thành công");
     } catch (err) {
-        console.error("❌ GHI SHEET LỖI:", err.message);
+        console.error("❌ GHI SHEET LỖI:", err.response?.data || err.message);
         throw err;
     }
 }

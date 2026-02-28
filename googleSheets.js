@@ -1,6 +1,6 @@
 import { google } from "googleapis";
 
-const SPREADSHEET_ID = "1vaYCxcRqm5yeVa6Fxwc5wee-aHagU2hOpq39ipNfwOs";
+const SPREADSHEET_ID = "1bdqKdPcjy4cUlErJQIrWY_ModdTWKn3PtuIFSNLMSq4";
 const SHEET_NAME = "Results";
 
 if (!process.env.GOOGLE_CREDENTIALS) {
